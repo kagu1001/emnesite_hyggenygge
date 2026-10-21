@@ -1,0 +1,287 @@
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/***** Forsiden *****/
+
+.Hyggenygge {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+
+  background-image: url("images/Hyggenygge.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin: 30px 0;
+}
+
+.grid_1-1 img {
+  width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero_knapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  transform: translateY(-100px);
+}
+
+/* MOBILVERSION */
+@media (max-width: 800px) {
+  .grid_1-1 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 50px 30px;
+  }
+
+  .grid_1-1 img {
+    width: 95%;
+  }
+}
+
+/* HEADER & NAVIGATION */
+
+header nav {
+  position: relative;
+}
+
+header nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 2rem;
+}
+
+/* Gør at burger er skjult på desktop */
+.burger {
+  display: none;
+}
+
+/* MOBIL OG TABLET */
+
+@media (max-width: 1100px) {
+  /* Skjul almindelige menuknapper */
+  header nav ul.menu {
+    display: none;
+  }
+
+  /* Viser burgerikonet */
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Viser menuen ved klik */
+  header nav.active ul.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 250px;
+    padding: 20px;
+
+    background-color: #e4ceb2;
+    z-index: 10;
+  }
+}
+
+/** kop billede **/
+
+.kop_grid {
+  max-width: 40%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  h2 {
+    font-family: "Dawning of a New Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 10vw;
+  }
+
+  .hero_dessert {
+    text-align: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .hero_hygge {
+    text-align: center;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+}
+
+/***** menu siden *****/
+
+.menu-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+}
+
+.menu-venstre {
+  position: relative;
+  height: 650px;
+}
+
+.menu-overskrift {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  font-size: 90px;
+}
+
+.siddendeperson {
+  position: absolute;
+  width: 65%;
+  top: 23%;
+  right: 8%;
+  transform: scaleX(-1);
+}
+
+.siddendeperson img {
+  width: 100%;
+  height: auto;
+}
+
+.menukort {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* mobilversion */
+
+@media (max-width: 800px) {
+  .menu-layout {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .menu-venstre {
+    height: 350px;
+  }
+
+  .menu-overskrift {
+    font-size: 55px;
+    top: 55%;
+  }
+
+  .siddendeperson {
+    width: 55%;
+    top: 18%;
+    right: 5%;
+  }
+
+  .menukort {
+    width: 100%;
+  }
+}
+
+h3 {
+  text-align: center;
+}
+
+.pile {
+  display: flex;
+  justify-content: center;
+}
+
+.sociale-medier {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/***** footer *****/
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 6%;
+  padding-top: 10px;
+  margin-top: 50px;
+}
+
+.footer-hojre {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+
+.sociale-medier img {
+  width: auto;
+  height: auto;
+}
+.tilmelding {
+  display: flex;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.mailfelt {
+  flex: 1;
+  padding: 20px;
+}
+
+.tilmeld-knap {
+  padding: 20px;
+}
+
+/** mobil version **/
+
+@media (max-width: 800px) {
+  footer {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .footer-hojre {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .tilmelding {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,231 @@
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/************* knapperne **************/
+
+.knap {
+  background-color: #73241d;
+  border-radius: 40px;
+  padding: 20px 30px;
+  text-align: center;
+  display: inline-block;
+
+  font-family: "Viga", sans-serif;
+  text-decoration: none;
+  font-size: 24px;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  color: whitesmoke;
+  margin: 4px 2px;
+}
+
+/***** text *****/
+
+h1 {
+  font-family: "Dawning of a New Day", cursive;
+  font-weight: 400;
+  font-size: 120px;
+  font-style: normal;
+  color: whitesmoke;
+}
+
+h2 {
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48px;
+}
+
+h3 {
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 32px;
+}
+
+p {
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/****** header *****/
+
+header {
+  background-color: #e4ceb2;
+  line-height: 2;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+header nav a {
+  text-decoration: none;
+  color: #73241d;
+  font-family: "Harmattan", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  border: 1px solid #73241d;
+  border-radius: 30px;
+  padding: 8px 18px;
+}
+
+header nav a.active {
+  background-color: #73241d;
+  color: #ffffff;
+}
+
+/***** navigation *****/
+
+nav {
+  display: flex;
+  align-items: center;
+  @media (width < 800px) {
+  }
+}
+
+body {
+  background-color: #e4ceb2;
+  margin: 0;
+  padding: 0;
+}
+
+.centreret {
+  text-align: center;
+}
+
+/***** MENU *****/
+.menu-overskrift {
+  font-size: 96px;
+  text-align: center;
+}
+
+.pil {
+  width: 20%;
+  height: auto;
+}
+
+.venstre {
+  transform: scaleX(-1);
+}
+
+h3 {
+  color: #592a0f;
+  text-decoration: underline;
+}
+
+/***** footer *****/
+
+footer {
+  background-color: #73241d;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer p {
+  color: #ffffff;
+  font-family: "Geist Mono", monospace;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+footer h4 {
+  color: #ffffff;
+  font-family: "Aleo", serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.mailfelt {
+  border: 1px solid #e4ceb2;
+  color: white;
+  font-family: "Geist Mono", monospace;
+}
+
+.tilmeld-knap {
+  background-color: #e4ceb2;
+  color: #592a0f;
+  font-family: "Geist Mono", monospace;
+}
+
+/***** burger *****/
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media (width < 800px) {
+    display: block;
+    background-color: transparent;
+    border: 0;
+
+    &.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  }
+}
+
+nav {
+  /**** desktop ****/
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media (width < 800px) {
+    /**** mobil ****/
+
+    &.active .menu {
+      display: block;
+      background-color: #9f7d8f;
+      position: absolute;
+      top: 94px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    &.active .menu li {
+      margin: 10px 20px;
+    }
+
+    &.active .menu a {
+      font-size: 24px;
+    }
+  }
+}
