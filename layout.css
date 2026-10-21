@@ -10,7 +10,7 @@ main {
   max-width: none;
   margin-left: calc(50% - 50vw);
 
-  background-image: url("images/Hyggenygge.webp");
+  background-image: url("/images/Hyggenygge.webp");
   background-size: cover;
   background-position: center;
   min-height: 90vh;
